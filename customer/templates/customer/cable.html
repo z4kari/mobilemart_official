@@ -1,0 +1,30 @@
+{% extends "customer/index.html" %}
+
+{% block content %}
+<div class="contents  Speaker-content">
+    
+    <div class="continer ">
+        <div class="row mt-5">
+            {% for cable in cables %}
+           
+            
+              <div class="col-md-4 p-box mb-5">
+                
+                <div class="card product-card " style="width: 18rem; " >
+                  <img src="{{cable.image1.url}}" class="card-img-top  mt-2 img-fluid " alt=""  width="50px" height="50px">
+                  <div class="card-body ">
+                    <h5 class="card-title"><span class="brand">{{cable.brand_name}} USB Type</span>&nbsp;<span>{{cable.cable_type}}</span>Cable</h5>
+                    <p class="card-text">{{cable.connector1}} to {{cable.connector2}} cable<p>
+                    <div> <h5 style="display: inline-block;" ><i class="fas fa-rupee-sign"></i>{{cable.price}}</h5><p style="display: inline-block; color: red;" class="ms-5"><strike>{{cable.market_price}}</strike></p></div>
+                    <a href="cable_detailed/{{cable.id}}" class="cart-btn-dark d-inline-block " title="view more"><i class="fa-solid fa-eye"></i></a>
+                    <a href="#" class="cart-btn ms-5 d-inline-block">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              
+           
+            {% endfor %}
+          </div>
+    </div>
+    
+{% endblock %}

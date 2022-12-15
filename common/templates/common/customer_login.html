@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="{% static 'css/customer_signup.css' %}">
+   
+</head>
+<body>
+    
+    <div class="container right-panel-active">
+        <!-- Sign Up -->
+        <div class="container__form container--signup">
+            <form action="#" class="form" id="form1" name="signupform" method="POST" >
+                {% csrf_token %}
+                <h2 class="form__title">LogIn</h2>
+                
+                <input type="email" placeholder="Email" class="input" name="email">
+                <input type="password" placeholder="Password" class="input" name="pswd">
+        
+                <button class="btn" type="submit" >LogIn</button>
+            </form>
+            <div>{{error_msg}}</div>
+        </div>
+        
+    
+    
+      
+    
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <!-- <button class="btn" id="signIn">Sign Up</button> -->
+                    <p>Don't have an account?</p>
+                    <a href="{% url 'common:csignup' %}" class="btn" id="signIn" style="text-decoration: none;">sign up</a>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</body>
+</html>

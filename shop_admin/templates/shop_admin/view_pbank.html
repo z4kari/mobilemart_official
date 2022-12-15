@@ -1,0 +1,27 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+   <div class="row">
+    {% for pbank in Powerbanks %}
+     <div class="col-md-3 mb-5">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ pbank.image1.url }}" class="card-img-top container mt-3" alt="..." width="50px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ pbank.capacity }}</h5>
+              <p class="card-text">  {{ pbank.qty }}</p>
+              <p class="card-text"> {{ pbank.brand_name }} </p>
+
+              <a href="update_powerbanks/{{pbank.id}}" class="btn btn-primary">Update</a>
+              <a href="delete_pb/{{pbank.id}}" class="btn btn-primary">delete</a>
+
+            </div>
+          </div>
+         
+     </div>
+     {% endfor %}  
+   </div>
+</div>
+{% endblock %}

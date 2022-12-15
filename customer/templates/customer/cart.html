@@ -1,0 +1,79 @@
+{% extends "customer/index.html" %}
+
+{% block content %}
+<div class="contents">
+    <div class="container">
+        <div class="row">
+            <div class="col-7 ">
+                <div class="row">
+                    <div class="cart_left_top_box  border">
+                        <h5 align="center " class="p-2">Mobilemart( <span>qty</span> )</h5>
+                    </div>
+                </div>
+                <div class=" mt-4">
+                   <div class="row cart_left_bottom_box border">
+                        <div class="col-3 mt-3 ">
+                            <img src="https://rukminim1.flixcart.com/image/224/224/l0fm07k0/mobile/y/g/i/-original-imagc7ryyhrrcgxh.jpeg?q=90"
+                                alt="" height="150px" width="90px">
+                        </div>
+                        <div class="col-8 mt-3 mb-4">
+                            <p style="font-size: 20px; "><b>product name</b></p>
+                            <p style="font-size: 25px; "><span class="me-5"><strike>offer rate</strike></span><b>product rate</b></p>
+                            <div class="row">
+                                <a href="" class="btn btn-danger col-4">Remove</a>
+                                <a href="" class="btn btn-warning col-6 ms-5">Place Order</a>
+
+                            </div>
+                        </div>
+                    
+                   </div>
+                </div>
+            </div>
+
+            <div class="ms-2 col-4 border">
+                <div class="row border-bottom">
+                    <h5 align="center" class="mt-2 ">PRICE DETAILS</h5>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-8">
+                       <p style="font-size:20px ;"> Price(qty) </p>
+                    </div>
+                    <div class="col-4">
+                       <p style="font-size:20px ;">  20000</p>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-8">
+                       <p style="font-size:20px ;"> Discount</p>
+                    </div>
+                    <div class="col-4">
+                       <p style="font-size:20px ;">  10000</p>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-8">
+                       <p style="font-size:20px ;"> Delivery Charges</p>
+                    </div>
+                    <div class="col-4">
+                       <p style="font-size:20px ;">  Free</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ">
+                    <div class="col-8">
+                       <p style="font-size:22px ;"> Total Amount</p>
+                    </div>
+                    <div class="col-4">
+                       <p style="font-size:22px ;">  20000</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ms-3 " style="color:green">
+                    your saved 10000 rupees in this order
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

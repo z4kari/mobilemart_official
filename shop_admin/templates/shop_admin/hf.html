@@ -1,0 +1,161 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+<div class="container">
+
+    <section class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">ADD Headphones</h3>
+        </div>
+        <div class="panel-body">
+
+            <form action="" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Model name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="model_name"  placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Brand name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="brand_name"  placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Color</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="color"  placeholder="">
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label for="about" class="col-sm-3 control-label">Headphone Type</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="hf_type"  placeholder="">
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label for="qty" class="col-sm-3 control-label">Inline Remote</label>
+                    <div class="col-sm-3">
+                        <select required name="inline_remote" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                        </select>
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Sales Package </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="sales_package"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Connectivity</label>
+                    <div class="col-sm-3">
+                        <select required name="connectivity" id="">
+                            <option value="Wired">Wired</option>
+                            <option value="Bluetooth">Bluetooth</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Headphone Design </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="hf_design"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Deep Bass  </label>
+                    <div class="col-sm-3">
+                        <select required name="deep_bass" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> with microphone  </label>
+                    <div class="col-sm-3">
+                        <select required name="microphone" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Warranty Summary</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="warranty_summary"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Covered in warranty</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="covered_warranty"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Not covered in warranty</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="not_in_warranty"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Market price</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="market_price"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Price</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="price"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Qty</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="qty"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Description</label>
+                    <div class="col-sm-3">
+                       <textarea required name="description" id="" cols="50" rows="5"></textarea>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- form-group // -->
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Images</label>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Front side </label> <input type="file"
+                            required name="image1">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Back side:</label> <input type="file"
+                            required name="image2">
+                    </div>
+                 
+                </div> <!-- form-group // -->
+
+                <hr>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div> <!-- form-group // -->
+            </form>
+
+        </div><!-- panel-body // -->
+    </section><!-- panel// -->
+
+
+</div>
+
+{% endblock %}

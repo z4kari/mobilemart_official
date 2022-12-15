@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'customer',
+    'common',
     'shop_admin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -79,10 +80,30 @@ WSGI_APPLICATION = 'mobilemart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':'official',
+      'USER':'postgres',
+      'PASSWORD':'zakari@2001',
+      'HOST':'localhost',
+      'PORT':'5432',
+
     }
 }
+
+# DATABASES = {
+#     'default': {
+#       'ENGINE':'django.db.backends.postgresql_psycopg2',
+#       'NAME':'dbg5pbmo2vocev',
+#       'USER':'khdakamlmfbofa',
+#       'PASSWORD':'d34dcad80f3a2f31886df26b58b91c1d0eb502ef500dd9c17e655a3605dd7370',
+#       'HOST':'ec2-34-239-241-121.compute-1.amazonaws.com',
+#       'PORT':'5432',
+
+#     }
+# }
+
+
+
 
 
 # Password validation
@@ -122,8 +143,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[ 
     os.path.join(BASE_DIR,'customer/static'),
-    os.path.join(BASE_DIR,'shop_admin/static')
+    os.path.join(BASE_DIR,'shop_admin/static'),
+    os.path.join(BASE_DIR,'common/static')
 ]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -1,0 +1,42 @@
+{% extends "customer/index.html" %}
+
+{% block content %}
+<div class="contents  Speaker-content">
+
+    <div class="continer ">
+        <div class="soundbar-products p-4">
+
+            <div class="row mt-3">
+                {% for h in hf %}
+
+
+                <div class="col-md-4 p-box mb-5">
+
+                    <div class="card product-card " style="width: 18rem; ">
+                        <img src="{{h.image1.url}}" class="card-img-top  mt-2 img-fluid " alt="" width="50px"
+                            height="50px">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="brand">{{h.brand_name}}
+                                </span>&nbsp;<span>{{h.model_name}} {{h.hf_type}}</span></h5>
+
+                            <div>
+                                <h5 style="display: inline-block;"><i class="fas fa-rupee-sign"></i>{{h.price}}
+                                </h5>
+                                <p style="display: inline-block; color: red;" class="ms-5">
+                                    <strike><i class="fas fa-rupee-sign"></i>{{h.market_price}}</strike></p>
+                            </div>
+                            <a href="hf_detailed/{{h.id}}" class="cart-btn-dark d-inline-block "
+                                title="view more"><i class="fa-solid fa-eye"></i></a>
+                            <a href="#" class="cart-btn ms-5 d-inline-block">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

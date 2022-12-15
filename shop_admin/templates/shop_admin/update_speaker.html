@@ -1,0 +1,60 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form action="/shopadmin/updateSpeaker" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+     
+        <input type="hidden" value="{{updateSpeaker.id}}" name="speaker_id">
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Battery Capacity</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required name="battery_capacity" placeholder="" value="{{updateSpeaker.battery_capacity}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Color  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required value="{{updateSpeaker.color}}" name="color" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Market Price  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control"  required value="{{updateSpeaker.market_price}}" name="market_price"  placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Price  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required value="{{updateSpeaker.price}}" name="price"  placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> QTY  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control"  required value="{{updateSpeaker.qty}}" name="qty"  placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Images</label>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img">Image1 </label> <input type="file"
+                    required value="{{updateSpeaker.image1}}" name="Image1">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img"> Image2</label> <input type="file"
+                    required value="{{updateSpeaker.image2}}" name="Image2">
+            </div>
+         
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit"  value="{{updateSpeaker.id}}" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

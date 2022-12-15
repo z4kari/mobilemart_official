@@ -1,0 +1,115 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form action="/shopadmin/updateLaptop" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        <input type="hidden"  value="{{updateLaptop.id}}" name="lap_id">
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Color</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required  value="{{updateLaptop.color}}" name="color" id="qty" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Suitable for </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required  value="{{updateLaptop.suitable}}" name="suitable" id="qty" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Ms office provided</label>
+            <div class="col-sm-3">
+               <select required   name="ms_office" id="">
+                <option value="{{updateLaptop.ms_office}}">{{updateLaptop.ms_office}}</option>
+                <option value="yes">YES</option>
+                <option value="no">NO</option>
+               </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">SSD</label>
+            <div class="col-sm-9">
+                <select required  value="" name="ssd" id="">
+                    <option value="{{updateLaptop.ssd}}">{{updateLaptop.ssd}}</option>
+                    <option value="yes">YES</option>
+                    <option value="no">NO</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">SSD Capacity</label>
+            <div class="col-sm-9">
+                <select required  value="" name="ssd_capacity" id="">
+                    <option value="{{updateLaptop.ssd_capacity}}">{{updateLaptop.ssd_capacity}}</option>
+                    <option value="128GB">128GB</option>
+                    <option value="256GB">256GB</option>
+                    <option value="512GB">512GB</option>
+                    <option value="1TB">1TB</option>
+                    <option value="2TB">2TB</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Ram </label>
+            <div class="col-sm-9">
+                <select required  value="" name="ram" id="">
+                    <option value="{{updateLaptop.ram}}">{{updateLaptop.ram}}</option>
+                    <option value="4GB">4GB</option>
+                    <option value="8GB">8GB</option>
+                    <option value="16GB">16GB</option>
+                    <option value="32GB">32GB</option>
+                    
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">market price</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required  value="{{updateLaptop.marketPrice}}" name="marketPrice" id="qty" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">price </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required  value="{{updateLaptop.Price}}" name="Price" id="qty" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">qty </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required  value="{{updateLaptop.qty}}" name="qty" id="qty" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Images</label>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img">Front side</label> <input type="file"
+                    required  value="{{updateLaptop.frontImage}}" name="frontImage">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img">Back side:</label> <input type="file"
+                    required  value="{{updateLaptop.backImage}}" name="backImage">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img">Left side</label> <input type="file"
+                    required  value="{{updateLaptop.leftImage}}" name="leftImage">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img">Right side</label> <input type="file"
+                    required  value="{{updateLaptop.rightImage}}" name="rightImage">
+            </div>
+        </div> <!-- form-group // -->
+
+        <hr>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-primary"  value="{{updateLaptop.id}}">Update </button>
+            </div>
+        </div> 
+
+    </form>
+</div>
+{% endblock %}

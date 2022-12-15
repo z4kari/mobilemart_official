@@ -1,0 +1,12 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+<a href="{% url 'shopadmin:view_mobiles' %}">view mobiles</a><br><br>
+<a href="{% url 'shopadmin:view_lap' %}">view laptops</a><br><br>
+<a href="{% url 'shopadmin:view_speaker' %}">view speakers</a><br><br>
+<a href="{% url 'shopadmin:view_hf' %}">view headphones</a><br><br>
+<a href="{% url 'shopadmin:view_cable' %}">view cables</a><br><br>
+<a href="{% url 'shopadmin:view_charger' %}">view chargers</a><br><br>
+<a href="{% url 'shopadmin:view_mmc' %}">view mmc</a><br><br>
+<a href="{% url 'shopadmin:view_pbank' %}">view power bank</a><br><br>
+{% endblock %}

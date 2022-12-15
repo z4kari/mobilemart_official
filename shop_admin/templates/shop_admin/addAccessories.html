@@ -1,0 +1,19 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="contents">
+    <div class="head">
+        <h1 >Mobile Accessories</h1>
+    </div>
+    <div class="accssList">
+        <ul type="none">
+            <li><a href="{% url 'shopadmin:hf' %}">Headphones&Headsets</a></li>
+            <li><a href="{% url 'shopadmin:powerBank' %}">Power Banks</a></li>
+            <li><a href="{% url 'shopadmin:mmc' %}">Memmory cards&pendrives</a></li>
+            <li><a href="{% url 'shopadmin:charger' %}">Mobile Chargers</a></li>
+            <li><a href="{% url 'shopadmin:cables' %}">Mobile Cables</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

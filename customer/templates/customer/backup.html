@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile phones</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <div class="nav-bar">
+        <div class="logo-socials">
+            <div class="logo">
+                <a href="/"><img class="logo" src="{% static 'images/logo.png' %}" alt="logo" style="margin-top: 40px;" width="px" height="60px"></a>
+            </div>
+            <form action="/search" method="POST">
+                <div class="search">
+                    <input type="text" id="input" name="input" placeholder="Search.." autocomplete="off">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="autocom-box" id="autocom-box"></div>
+            </form>
+
+            <div class="social">
+              <ul>
+                <li><a href="">Whishlist</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">My Account</a></li>
+              </ul>
+                  
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul class="navs">
+            
+             
+                <li id="home"><a href="{% url 'customer:home' %}" id="a-home">Home</a></li>
+                <li><a href="{% url 'customer:mobile' %}" class="active">Mobiles</a></li>
+                <li><a href="{% url 'customer:lap' %}">Laptops</a></li>
+                <li><a href="{% url 'customer:accessories' %}">Accessories</a></li>
+                <li><a href="{% url 'customer:speakers' %}" id="news">Speakers</a></li>
+              
+              
+            </ul>
+        </div>
+        <div class="bottom">
+        </div>
+    </div>
+</header>
+<section>
+    <div class="contents">
+       
+    </div>
+    
+</section>
+<footer>
+    <div class="container-fluid bg-dark">
+        <div class="container mt-5">
+            <div class="row footer">
+                <div class="col mt-5 mb-5">
+                    <div class="ftr">
+                        <h6 class="text-white">ABOUT</h6>
+                        <div> <a href="">About Us</a></div>
+                        <div> <a href="">Contact Us</a></div>
+
+                    </div>
+                </div>
+                <div class="col mt-5 mb-5 ">
+                    <div class="ftr">
+                        <h6 class="text-white">HELP</h6>
+                        <div> <a href="">Payments</a></div>
+                        <div> <a href="">Shipping</a></div>
+                        <div> <a href="">Cancellation & returns</a></div>
+                        <div> <a href="">Shipping</a></div>
+
+                    </div>
+                </div>
+                <div class="col mt-5 mb-5">
+                    <div class="ftr">
+                        <h6 class="text-white">POLICY</h6>
+                        <div> <a href="">Return Policy</a></div>
+                        <div> <a href="">Terms of Use</a></div>
+                        <div> <a href="">Security</a></div>
+                        <div> <a href="">Privacy</a></div>
+                        <div> <a href="">Privacy</a></div>
+
+                    </div>
+                </div>
+                <div class="col mt-5  mb-5">
+                    <div class="ftr">
+                        <h6 class="text-white">SOCIAL</h6>
+                        <div> <a href="">Facebook</a></div>
+                        <div> <a href="">Twitter</a></div>
+                        <div> <a href="">Instagram</a></div>
+                      
+
+                    </div>
+                </div>
+                <div class="col mt-5 mb-5 ">
+                    <div class="">
+                        <h6 class="text-white">Registered office Address:</h6>
+                        <div class="text-white">Mobile mart pvt limited,
+                            <br>Maruthonkara Road Kuttiady,
+                            <br>Calicut,
+                            <br>Kerala,
+                            <br>673508
+                            <br>Telephone:0496-2445413
+
+                        </div>
+                     
+                      
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

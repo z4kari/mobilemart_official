@@ -1,0 +1,29 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+   <div class="row">
+    {% for mobile in mobiles %}
+     <div class="col-md-3 mb-5">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ mobile.frontImage.url }}" class="card-img-top container mt-3" alt="..." width="50px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ mobile.mobileName }}</h5>
+              <p class="card-text">  {{ mobile.qty }}</p>
+              <p class="card-text"> {{ mobile.brandName }} </p>
+              <p class="card-text"> {{ mobile.ram }} </p>
+              <h5> {{ mobile.Price }}</h5>
+
+              <a href="update_mobiles/{{mobile.id}}" class="btn btn-primary">Update</a>
+              <a href="delete_mobile/{{mobile.id}}" class="btn btn-primary">delete</a>
+
+            </div>
+          </div>
+         
+     </div>
+     {% endfor %}  
+   </div>
+</div>
+{% endblock %}

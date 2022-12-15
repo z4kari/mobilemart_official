@@ -1,0 +1,27 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+   <div class="row">
+    {% for lap in laptops %}
+     <div class="col-md-3 mb-5">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ lap.frontImage.url }}" class="card-img-top container mt-3" alt="..." width="50px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ lap.model_name }}</h5>
+              <p class="card-text">  {{ lap.qty }}</p>
+              <p class="card-text"> {{ lap.brand_name }} </p>
+              <h5>{{lap.Price}}</h5>
+              <a href="update_laptop/{{lap.id}}" class="btn btn-primary">update</a>
+              <a href="delete_lap/{{lap.id}}" class="btn btn-primary">delete</a>
+
+            </div>
+          </div>
+         
+     </div>
+     {% endfor %}  
+   </div>
+</div>
+{% endblock %}

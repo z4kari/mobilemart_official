@@ -1,0 +1,121 @@
+
+{% extends "customer/index.html" %}
+
+
+{% block content %}
+<div class="contents" >
+        <div class="container">
+        <div class="row ">
+          <div class="col mb-2 ">
+           <a href="">
+            <div class="brand-box first">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVOWg-1ANkavRiAIOs2hcrbBKOllbiPgNSpFoNb-jVUBBZ2BJmEQwh_hytjxZ_ben7UDo&usqp=CAU" alt="">
+            </div>
+           </a>
+          </div>
+          <div class="col mb-2">
+            <a href="">
+                <div class="brand-box first">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBM9Fg_SuM7rc3RzYKLLxK24DCBEOKGbor1YyAY6Nkjg&s" alt="">
+                    
+                </div>
+               </a>
+          </div>
+          <div class="col mb-2">
+            <a href="">
+                <div class="brand-box first">
+                    <img src='' alt="poco" >
+                
+                </div>
+               </a>
+          </div>
+          <div class="col mb-2">
+            <a href="">
+                <div class="brand-box first">
+                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQeNCOc7uf_ULJeglBsNuCrxU3uJJK5eOnA&usqp=CAU' alt="" >
+                
+                </div>
+               </a>
+          </div>
+          <div class="col mb-2">
+            <a href="">
+                <div class="brand-box first">
+                    <img src='' alt="mi" >
+                
+                </div>
+               </a>
+          </div>    
+          <div class="col mb-2">
+            <a href="">
+                <div class="brand-box first">
+                    <img src='' alt="apple" >
+                
+                </div>
+               </a>
+          </div>  
+        </div>
+    </div>
+</div>
+<!-- brand section end -->
+
+<section>
+    <div class="container mt-5">
+        <img src="https://thevocalnews.com/wp-content/uploads/2021/04/Mi-11X-Pro.jpg" alt="" class="w-100 " height="400px">
+    </div>
+</section>
+<section>
+    <!-- product session -->
+   
+    <div class="container-fluid mt-5">
+        <div>
+            <h1 align="center" style="color:blue">NEW LAUNCHES</h1>
+        </div>
+        <div class="container">
+             <!-- 1st row -->
+        
+          <div class="row mt-5">
+            {% for mob in mobile %}
+           
+            
+              <div class="col-md-4 p-box mb-5">
+                
+                <div class="card product-card" style="width: 18rem; height: 20rem;  " >
+                  <img src="{{mob.backImage.url}}" class="ms-5  mt-2 img-fluid " alt=""  width="150px" height="50px">
+                  <div class="card-body ">
+                    <h5 class="card-title ms-3 mt-3"><span class="brand">{{mob.brandName}}</span>&nbsp;<span>{{mob.mobileName}}</span></h5>
+                   
+                    <div class="mt-3 ms-3 "> <h5 ><i class="fas fa-rupee-sign"></i>:{{mob.Price}}</h5></div>
+                    <a href="mob_detailed/{{mob.id}}" class="cart-btn-dark d-inline-block " title="view more"><i class="fa-solid fa-eye"></i></a>
+                    <a href="" class="cart-btn ms-5 d-inline-block">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              
+           
+            {% endfor %}
+          </div>
+       
+        </div>
+        <nav aria-label="..." class="d-flex align-items-center justify-content-center">
+          <ul class="pagination mt-4">
+            <li class="page-item disabled">
+              <span class="page-link">Previous</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">2</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+        
+    </div> 
+   
+</section>
+
+ 
+
+{% endblock %}

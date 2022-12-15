@@ -1,13 +1,55 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add products</title>
-</head>
-<body>
-   <h1>add products</h1>
-</body>
-</html>
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+<!-- mobile -->
+<!-- laptops -->
+<!-- accessries -->
+<!-- speakers -->
+
+<div class="row mt-5  ">
+    <div class="col-md-3 d-flex justify-content-center mb-5">
+        <a href="{% url 'shopadmin:addMobile' %}" class="text-decoration-none text-center text-dark">
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.rawpixel.com/image_500/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczczLWV2ZS1zZXQtMDUtbW9ja3VwXzEuanBn.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-text">Add mobile</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center mb-5">
+        <a href="{% url 'shopadmin:addLaptop' %}" class="text-decoration-none text-center text-dark">
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.rawpixel.com/image_500/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zOTEtcGYtczczLTA4LW1vY2t1cC5qcGc.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-text">Add Laptops</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+   
+
+
+    <div class="col-md-3 d-flex justify-content-center mb-5">
+        <a href="{% url 'shopadmin:addAccessories' %}" class="text-decoration-none text-center text-dark">
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.rawpixel.com/image_500/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczczLXBhaS05OS10b25nLW1vY2t1cF8yLmpwZw.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-text">Add Accessories</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center mb-5">
+        <a href="{% url 'shopadmin:addSpeaker' %}" class="text-decoration-none text-center text-dark">
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.rawpixel.com/image_500/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L3BmLTQ1LWt0LTU2NjQuanBn.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-text">Add Speakers</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

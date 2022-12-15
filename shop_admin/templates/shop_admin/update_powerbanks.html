@@ -1,0 +1,65 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form action="/shopadmin/updatePbank" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="qty" class="col-sm-3 control-label">Capacity</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control"  required value="{{updatePb.capacity}}" name="capacity" placeholder="">
+            </div>
+        </div>
+        <input type="hidden" value="{{updatePb.id}}" name="pb_id">
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Number of Output Ports</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control"  required value="{{updatePb.nof_output_ports}}" name="nof_output_ports" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Color  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required value="{{updatePb.color}}" name="color" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Market Price  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control"  required value="{{updatePb.market_price}}" name="market_price"  placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Price  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required value="{{updatePb.price}}" name="price"  placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> QTY  </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control"  required value="{{updatePb.qty}}" name="qty"  placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Images</label>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img">Image1 </label> <input type="file"
+                    required value="{{updatePb.image1}}" name="image1">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" for="file_img"> Image2</label> <input type="file"
+                    required value="{{updatePb.image2}}" name="image2">
+            </div>
+         
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit"  value="{{updatePb.id}}" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <section class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">ADD MOBILE </h3>
+        </div>
+        <div class="panel-body">
+
+            <form action="" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Mobile name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="mobileName"  placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Brand name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="brandName"  placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label"> salesPackage</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="salesPackage"  placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="about" class="col-sm-3 control-label">Network Service Provider</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="nsp" placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="qty" class="col-sm-3 control-label">OS</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="os" placeholder="">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Cellular Technology</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="CT" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> color</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="color" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> RAM</label>
+                    <div class="col-sm-3">
+                        <!-- <input type="text" class="form-control" required name="ram" placeholder=""> -->
+                        <select required name="ram" id="">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="16">16</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Internal Storage </label>
+                    <div class="col-sm-3">
+                        <!-- <input type="text" class="form-control" required name="storage" placeholder=""> -->
+                        <select required name="storage" id="">
+                            <option value="16">16 </option>
+                            <option value="32">32</option>
+                            <option value="64">64</option>
+                            <option value="128">128</option>
+                            <option value="256">256</option>
+                            <option value="512">512</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Battery</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="battery" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Camera</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="camera" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> processor</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="processor" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> display</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="display" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">market price</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="marketPrice" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">price </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="price" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">qty </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="qty" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">description </label>
+                    <div class="col-sm-3">
+                       <textarea required name="description" id="" cols="50" rows="5" ></textarea>
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Images</label>
+                    <div class="col-sm-3">
+                        <label class="control-label small" >Front side</label> <input type="file"
+                            required name="frontImage">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" >Back side:</label> <input type="file"
+                            required name="backImage">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" >Left side</label> <input type="file"
+                            required name="leftImage">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" >Right side</label> <input type="file"
+                            required name="rightImage">
+                    </div>
+                </div> 
+
+                <hr>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div> 
+            </form>
+
+        </div><!-- panel-body // -->
+    </section><!-- panel// -->
+
+
+</div>
+{% endblock %}

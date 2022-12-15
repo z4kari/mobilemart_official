@@ -1,0 +1,165 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+<div class="container">
+
+    <section class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">ADD Charger </h3>
+        </div>
+        <div class="panel-body">
+
+            <form action="" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Brand name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="brand_name"  placeholder="">
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Sales Package</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="sales_package"  placeholder="">
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label for="about" class="col-sm-3 control-label">Model Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="model_name" placeholder="">
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label for="qty" class="col-sm-3 control-label">Model Number</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="model_number" placeholder="">
+                    </div>
+                </div> <!-- form-group // -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Output intrferance </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="output_interferance" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> LED Indicator  </label>
+                    <div class="col-sm-3">
+                        <select required name="led" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Display</label>
+                    <div class="col-sm-3">
+                        <select required name="dispaly" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Cable Length</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="cable_length" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Power Input  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="power_input" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Power Source  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="power_source" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Output Current  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="output_current" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Output Wattage  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="output_wattage" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Warranty summary   </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="warranty" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Covered in Warranty    </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="covered_warranty" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Not Covered in Warranty    </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="not_in_warranty" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Market Price  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="market_price"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Price  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="price"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> QTY  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="qty"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Description  </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" required name="description"  placeholder="">
+                    </div>
+                </div>
+              
+                <!-- form-group // -->
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Images</label>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">IMAGE1 </label> <input type="file"
+                            required name="image1">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">IMAGE2</label> <input type="file"
+                            required name="image2">
+                    </div>
+                 
+                </div> <!-- form-group // -->
+
+                <hr>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div> <!-- form-group // -->
+            </form>
+
+        </div><!-- panel-body // -->
+    </section><!-- panel// -->
+
+
+</div>
+
+{% endblock %}

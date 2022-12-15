@@ -1,0 +1,383 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+<div class="container">
+
+    <section class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">ADD LAPTOP </h3>
+        </div>
+        <hr>
+        <div class="panel-body">
+
+            <form action="" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <div class="general">
+                    <h4>General</h4>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Model Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name='model_name' placeholder="">
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Brand Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name='brand_name' placeholder="">
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Sales Package</label>
+                        <div class="col-sm-9">
+                          <textarea required name="sales_package" id="" cols="100" rows="3"></textarea>
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label for="about" class="col-sm-3 control-label"> Model Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="model_number" id="qty" placeholder="">
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label for="qty" class="col-sm-3 control-label">Part Number</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="part_number" id="qty" placeholder="">
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Series</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="series" id="qty" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"> Color</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="color" id="qty" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"> Type</label>
+                        <div class="col-sm-3">
+                            <!-- <input type="text" class="form-control" required name="qty" id="qty" placeholder=""> -->
+                            <select required name="lap_type" id="">
+                                <option value="gaming">Gaming Laptop</option>
+                                <option value="browsing">Browsing Laptop</option>
+                                <option value="programming">Programming Laptop</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Suitable for </label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="suitable" id="qty" placeholder="">
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"> Battery cell</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="Battery_cell"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"> Ms office provided</label>
+                        <div class="col-sm-3">
+                           <select required name="ms_office" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                           </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"> Weight</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="weight"  placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="processor">
+                    <h4>processor and memmory features</h4>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label"> Dedicated Graphic Memmory</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="dgm"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Dedicated Graphic Memmory Capacity</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="dgmc"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Processor Brand</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="processor_brand"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Processor Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="processor_name"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">SSD</label>
+                        <div class="col-sm-9">
+                            <select required name="ssd" id="">
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">SSD Capacity</label>
+                        <div class="col-sm-9">
+                            <select required name="ssd_capacity" id="">
+                                <option value="128GB">128GB</option>
+                                <option value="256GB">256GB</option>
+                                <option value="512GB">512GB</option>
+                                <option value="1TB">1TB</option>
+                                <option value="2TB">2TB</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Ram </label>
+                        <div class="col-sm-9">
+                            <select required name="ram" id="">
+                                <option value="4GB">4GB</option>
+                                <option value="8GB">8GB</option>
+                                <option value="16GB">16GB</option>
+                                <option value="32GB">32GB</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">RAM Type</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="ram_type"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label"> Processor Varient</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="processor_varient"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Clock Speed</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="clock_speed"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Graphic Processor</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="graphic_processor"  placeholder="">
+                        </div>
+                    </div>
+                   
+
+                </div>
+                <hr>
+                <h4>operaring system</h4>
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label"> OS Architecture  </label>
+                    <div class="col-sm-9">
+                        <select required name="os_architecture" id="">
+                            <option value="32 bit">32 bit</option>
+                            <option value="64 bit">64 bit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label"> operaring system  </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="os"   placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label"> Dedicated Graphic Memmory</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" required name="dgm"  placeholder="">
+                    </div>
+                </div>
+                <hr>
+                <div class="display">
+                    <h4>Display and Audio features</h4>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label"> Touch Screen</label>
+                        <div class="col-sm-9">
+                            <select required name="touch_screen" id="">
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Screen Size</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="screen_size"  placeholder="in inch">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Screen Resolution</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="screen_resolution"  placeholder="in pixel">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Screen Type</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="screen_type"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Speakers</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="Speakers"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Internal Mic</label>
+                        <div class="col-sm-9">
+                           <select required name="internal_mic" id="">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                           </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Sound Properties</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="Sound_properties"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Refresh Rate</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="refresh_rate"  placeholder="in hz">
+                        </div>
+                    </div>  
+                  
+                </div>
+                <hr>
+                <div class="price">
+                    <h4>MRP</h4>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">market price</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="marketPrice" id="qty" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">price </label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="Price" id="qty" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">qty </label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" required name="qty" id="qty" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">description </label>
+                        <div class="col-sm-3">
+                           <textarea required name="description" id="" cols="50" rows="5" ></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="connectivity">
+                    <h4>Connectivity Features</h4>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Wireless Lan</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="wireless_lan"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Bluetooth</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="bluetooth"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Ethernet</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="ethernet"  placeholder="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="warranty">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Warranty Summary</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="warranty_type"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Warranty Service Type</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="warranty_service_type"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Covered in Warranty</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="covered_in_warranty"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Not Covered in Warranty</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="not_in_warranty"  placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- form-group // -->
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Images</label>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Front side</label> <input type="file"
+                            required name="frontImage">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Back side:</label> <input type="file"
+                            required name="backImage">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Left side</label> <input type="file"
+                            required name="leftImage">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Right side</label> <input type="file"
+                            required name="rightImage">
+                    </div>
+                </div> <!-- form-group // -->
+
+                <hr>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">Add Laptop</button>
+                    </div>
+                </div> <!-- form-group // -->
+            </form>
+
+        </div><!-- panel-body // -->
+    </section><!-- panel// -->
+
+
+</div>
+
+{% endblock %}

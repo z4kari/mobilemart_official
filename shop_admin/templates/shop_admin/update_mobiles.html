@@ -1,0 +1,100 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form action="/shopadmin/updateMobile" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="hidden" value="{{updateMOBILE.id}}" name="mob_id">
+            <label class="col-sm-3 control-label"> RAM</label>
+            <div class="col-sm-3">
+                <!-- <input type="text" class="form-control" required name="ram" placeholder=""> -->
+                <select required name="ram" id="" >
+                    <option value="{{updateMOBILE.ram}}">{{updateMOBILE.ram}}</option>
+                    
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Internal Storage </label>
+            <div class="col-sm-3">
+                <!-- <input type="text" class="form-control" required name="storage" placeholder=""> -->
+                <select required name="internalStorage" id="">
+                    <option value="{{updateMOBILE.internalStorage}}">{{updateMOBILE.internalStorage}}</option>
+                    <option value="16">16 </option>
+                    <option value="32">32</option>
+                    <option value="64">64</option>
+                    <option value="128">128</option>
+                    <option value="256">256</option>
+                    <option value="512">512</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Battery</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required name="battery" placeholder="" value="{{updateMOBILE.battery}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Camera</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required name="camera" placeholder="" value="{{updateMOBILE.camera}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">market price</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required name="marketPrice" placeholder="" value="{{updateMOBILE.marketPrice}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">price </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required name="price" placeholder="" value="{{updateMOBILE.Price}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">qty </label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" required name="qty" placeholder="" value="{{updateMOBILE.qty}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Images</label>
+            <div class="col-sm-3">
+                <label class="control-label small" >Front side</label> <input type="file"
+                    required name="frontImage" value="{{updateMOBILE.frontImage}}">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" >Back side:</label> <input type="file"
+                    required name="backImage" value="{{updateMOBILE.backImage}}">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" >Left side</label> <input type="file"
+                    required name="leftImage" value="{{updateMOBILE.leftImage}}">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label small" >Right side</label> <input type="file"
+                    required name="rightImage" value="{{updateMOBILE.rightImage}}">
+            </div>
+        </div> 
+
+        <hr>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-primary" value="{{updateMOBILE.id}}">Add</button>
+            </div>
+        </div> 
+
+    </form>
+</div>
+{% endblock %}

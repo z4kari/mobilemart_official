@@ -1,0 +1,28 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+   <div class="row">
+    {% for cable in cables %}
+     <div class="col-md-3 mb-5">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ cable.image1.url }}" class="card-img-top container mt-3" alt="..." width="50px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ cable.model }}</h5>
+              <p class="card-text">  {{ cable.qty }}</p>
+              <p class="card-text"> {{ cable.brand_name }}</p>
+              <h5>{{cable.price}}</h5>
+
+              <a href="update_cable/{{cable.id}}" class="btn btn-primary">Update</a>
+              <a href="delete_cable/{{cable.id}}" class="btn btn-primary">delete</a>
+
+            </div>
+          </div>
+         
+     </div>
+     {% endfor %}  
+   </div>
+</div>
+{% endblock %}

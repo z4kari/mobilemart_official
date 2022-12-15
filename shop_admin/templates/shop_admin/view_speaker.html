@@ -1,0 +1,28 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+   <div class="row">
+    {% for speaker in speakers %}
+     <div class="col-md-3 mb-5">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ speaker.Image1.url }}" class="card-img-top container mt-3" alt="..." width="50px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ speaker.model_name }}</h5>
+              <p class="card-text">  {{ speaker.qty }}</p>
+              <p class="card-text"> {{ speaker.brand_name }} </p>
+              <h5> {{ speaker.price }}</h5>
+
+              <a href="update_speaker/{{speaker.id}}" class="btn btn-primary">Update</a>
+              <a href="delete_speaker/{{speaker.id}}" class="btn btn-primary">delete</a>
+
+            </div>
+          </div>
+         
+     </div>
+     {% endfor %}  
+   </div>
+</div>
+{% endblock %}

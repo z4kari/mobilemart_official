@@ -1,0 +1,27 @@
+{% extends "shop_admin/index.html" %}
+
+{% block content %}
+
+<div class="container">
+   <div class="row">
+    {% for h in hf %}
+     <div class="col-md-3 mb-5">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ h.image1.url }}" class="card-img-top container mt-3" alt="..." width="50px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ h.model_name }}</h5>
+              <p class="card-text">  {{ h.qty }}</p>
+              <p class="card-text"> {{ h.brand_name }} </p>
+              <h5>{{h.price}}</h5>
+              <a href="update_hf/{{h.id}}" class="btn btn-primary">Update</a>
+              <a href="delete_hf/{{h.id}}" class="btn btn-primary">delete</a>
+
+            </div>
+          </div>
+         
+     </div>
+     {% endfor %}  
+   </div>
+</div>
+{% endblock %}

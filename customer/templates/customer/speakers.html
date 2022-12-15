@@ -1,0 +1,114 @@
+{% extends "customer/index.html" %}
+
+{% block content %}
+<div class="contents  Speaker-content">
+    <div class="Speaker-head container-fluid pt-3 ps-2">
+        <h4 style="font-weight: 600;" class=''>Speakers</h4>
+    </div>
+    <div class="continer ">
+        <div class="soundbar-products p-4">
+        <h4 class="">Soundbars</h4>
+        <div class="row mt-3">
+     
+            {% for s in sp %}
+
+                {% if s.speaker_type == 'Sound bars' %}
+            <div class="col-md-4 p-box mb-5">
+
+                <div class="card product-card " style="width: 18rem; ">
+                    <img src="{{s.Image1.url}}" class="card-img-top  mt-2 img-fluid " alt="" width="50px"
+                        height="50px">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="brand">{{s.brand_name}}
+                            </span>&nbsp;<span>{{s.model_name}}  {{s.speaker_type}}</span></h5>
+
+                        <div>
+                            <h5 style="display: inline-block;"><i class="fas fa-rupee-sign"></i>{{s.price}}
+                            </h5>
+                            <p style="display: inline-block; color: red;" class="ms-5">
+                                <strike><i class="fas fa-rupee-sign"></i>{{s.market_price}}</strike></p>
+                        </div>
+                        <a href="speaker_detailed/{{s.id}}" class="cart-btn-dark d-inline-block "
+                            title="view more"><i class="fa-solid fa-eye"></i></a>
+                        <a href="#" class="cart-btn ms-5 d-inline-block">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+                {% endif %}
+            {% endfor %}
+
+            
+        </div>
+        </div>
+    </div>
+    <div class="continer ">
+        <div class="soundbar-products p-4">
+        <h4 class="">Home Theaters</h4>
+        <div class="row mt-3">
+            {% for s in sp %}
+
+            {% if s.speaker_type == 'Home theaters' %}
+        <div class="col-md-4 p-box mb-5">
+
+            <div class="card product-card " style="width: 18rem; ">
+                <img src="{{s.Image1.url}}" class="card-img-top  mt-2 img-fluid " alt="" width="50px"
+                    height="50px">
+                <div class="card-body">
+                    <h5 class="card-title"><span class="brand">{{s.brand_name}}
+                        </span>&nbsp;<span>{{s.model_name}}  {{s.speaker_type}}</span></h5>
+
+                    <div>
+                        <h5 style="display: inline-block;"><i class="fas fa-rupee-sign"></i>{{s.price}}
+                        </h5>
+                        <p style="display: inline-block; color: red;" class="ms-5">
+                            <strike><i class="fas fa-rupee-sign"></i>{{s.market_price}}</strike></p>
+                    </div>
+                    <a href="speaker_detailed/{{s.id}}" class="cart-btn-dark d-inline-block "
+                        title="view more"><i class="fa-solid fa-eye"></i></a>
+                    <a href="#" class="cart-btn ms-5 d-inline-block">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+            {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+    </div>
+    <div class="continer ">
+        <div class="soundbar-products p-4">
+        <h4 class="">Smart Speakers</h4>
+        <div class="row mt-3">
+            {% for s in sp %}
+
+            {% if s.speaker_type == 'Smart Speakers' %}
+        <div class="col-md-4 p-box mb-5">
+
+            <div class="card product-card " style="width: 18rem; ">
+                <img src="{{s.Image1.url}}" class="card-img-top  mt-2 img-fluid " alt="" width="50px"
+                    height="50px">
+                <div class="card-body">
+                    <h5 class="card-title"><span class="brand">{{s.brand_name}}
+                        </span>&nbsp;<span>{{s.model_name}}  {{s.speaker_type}}</span></h5>
+
+                    <div>
+                        <h5 style="display: inline-block;"><i class="fas fa-rupee-sign"></i>{{s.price}}
+                        </h5>
+                        <p style="display: inline-block; color: red;" class="ms-5">
+                            <strike><i class="fas fa-rupee-sign"></i>{{s.market_price}}</strike></p>
+                    </div>
+                    <a href="speaker_detailed/{{s.id}}" class="cart-btn-dark d-inline-block "
+                        title="view more"><i class="fa-solid fa-eye"></i></a>
+                    <a href="#" class="cart-btn ms-5 d-inline-block">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+            {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
